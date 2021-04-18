@@ -1,10 +1,10 @@
 require('dotenv').config();
-
 const {
   DATABASE_URL,
   SUPABASE_SERVICE_API_KEY
 } = process.env;
 
+const { stripHtml } = require("string-strip-html");
 
 exports.handler = async event => {
   
@@ -35,9 +35,9 @@ exports.handler = async event => {
     .from('ideas')
     .insert([
       {
-        title: title,
-        description: description, 
-        user: name, 
+        title: stripHtml(title).result,
+        description: stripHtml(description).result, 
+        user: stripHtml(name).result, 
         path: path
       },
     ]);

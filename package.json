@@ -29,7 +29,8 @@
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "nanoid": "^3.1.22",
-    "sass": "^1.29.0"
+    "sass": "^1.29.0",
+    "string-strip-html": "^8.2.13"
   },
   "devDependencies": {
     "@netlify/functions": "^0.7.0"
