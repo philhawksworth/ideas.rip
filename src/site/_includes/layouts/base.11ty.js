@@ -1,11 +1,9 @@
 module.exports = (data) => { 
 
-  const title = data.title || "Idea resting in peace";
-
   
   return `<html>
     <head>
-      <title>${title}</title>
+      <title>${data.title}</title>
       <link rel="stylesheet" href="/css/main.css">
     </head>
     <body>
@@ -13,14 +11,11 @@ module.exports = (data) => {
         <p>
           <a href="/">Home</a> |
         </p>
-        <h1>${title}</h1>
+        <h1>${data.title}</h1>
       </header>
-      <div class="container">
-      ${ data.description }
-      </div>
-      <p>${data.name}</p>
+        ${data.content}
       <footer>
-        
+        <a href="/api/latest">latest</a>
       </footer>
     </body>
     </html>`;

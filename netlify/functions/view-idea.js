@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const { builder } = require("@netlify/functions");
-const pageTemplate = require('../../src/site/_includes/layouts/base.11ty.js');
+const pageTemplate = require('../../src/site/_includes/layouts/idea.11ty.js');
 const {
   DATABASE_URL,
   SUPABASE_SERVICE_API_KEY
@@ -21,6 +21,9 @@ const handler = async event => {
     .from('ideas')
     .select('*')
     .eq('path', path);
+
+  
+  console.log(`ODB render of ${path} (deploy: ${process.env.DEPLOY_ID})`);
   
   // render the data into the template
   return {
@@ -28,7 +31,7 @@ const handler = async event => {
     headers: {
       "Content-Type": "text/html",
     },
-    body: pageTemplate(ideas[0]),
+    body: pageTemplate(ideas[0])
   }
 }
 
