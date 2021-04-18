@@ -1,10 +1,4 @@
 
-const baseData = {
-  DEPLOY_ID: process.env.DEPLOY_ID || "local"
-}
-
-
-
 module.exports = (data) => { 
 
   return `<html>
@@ -22,9 +16,7 @@ module.exports = (data) => {
         ${data.content}
       <footer>
         <a href="/api/latest">latest</a>
-        <p>
-          Page generated as part of <a href="https://app.netlify.com/sites/ideas-rip/deploys/${baseData.DEPLOY_ID}">deploy: ${baseData.DEPLOY_ID}</a>
-        </p>
+
       </footer>
     </body>
     </html>`;
