@@ -16,7 +16,7 @@ const handler = async event => {
   const supabase = createClient(DATABASE_URL, SUPABASE_SERVICE_API_KEY);
   
   // Fetch the idea at the specified path
-  const path = event.path.split("ideas/")[1];
+  const path = event.path.split("idea/")[1];
   let { data: ideas, error } = await supabase
     .from('ideas')
     .select('*')
