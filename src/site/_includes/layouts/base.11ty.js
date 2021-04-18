@@ -1,6 +1,5 @@
 module.exports = (data) => { 
 
-  
   return `<html>
     <head>
       <title>${data.title}</title>
@@ -16,6 +15,9 @@ module.exports = (data) => {
         ${data.content}
       <footer>
         <a href="/api/latest">latest</a>
+        <p>
+          Page generated as part of <a href="https://app.netlify.com/sites/ideas-rip/deploys/${site.DEPLOY_ID}">deploy ${site.DEPLOY_ID}</a>
+        </p>
       </footer>
     </body>
     </html>`;
