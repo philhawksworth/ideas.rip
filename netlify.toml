@@ -6,6 +6,9 @@
   publish = "dist"
   command = "npm run serve"
 
+[functions]
+  node_bundler = "esbuild"
+
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
