@@ -11,3 +11,12 @@ layout: layouts/base.11ty.js
   <input type="text" name="name">
   <input type="submit">
 </form>
+
+
+<div class="latest-ideas">
+{% for idea in ideas %}
+<div class="idea">
+  <h2><a href="/idea/{{idea.path}}">{{idea.title}}</a></h2>
+</div>
+{% endfor %}
+</div>

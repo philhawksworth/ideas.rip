@@ -16,6 +16,7 @@ module.exports = (data) => {
         ${data.content}
       <footer>
         <a href="/api/latest">latest</a>
+        <a href="/api/lucky-dip">Lucky dip</a>
 
       </footer>
     </body>
