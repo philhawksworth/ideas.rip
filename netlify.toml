@@ -16,6 +16,6 @@
 
 
 [[redirects]]
-  from = "/ideas/*"
+  from = "/idea/*"
   to = "/.netlify/functions/view-idea/:splat"
   status = 200
