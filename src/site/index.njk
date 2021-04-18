@@ -1,0 +1,13 @@
+---
+title: Home
+layout: layouts/base.njk
+---
+
+<h1>Ideas RIP</h1>
+
+<form action="/api/add-idea" name="ideas"  method="POST" netlify>
+  <input type="text" name="title">
+  <textarea name="description" id="description" cols="30" rows="10"></textarea>
+  <input type="text" name="name">
+  <input type="submit">
+</form>
