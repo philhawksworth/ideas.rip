@@ -23,7 +23,7 @@ const handler = async event => {
     .eq('path', path);
 
   
-  console.log(`ODB render of ${path} (deploy: ${process.env.DEPLOY_ID})`);
+  console.log(`ODB render of ${path}`);
   
   // render the data into the template
   return {
