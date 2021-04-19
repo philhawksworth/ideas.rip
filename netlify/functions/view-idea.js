@@ -24,6 +24,8 @@ const handler = async event => {
 
   
   console.log(`ODB render of ${path}`);
+  console.log(process.env);
+  
   
   // render the data into the template
   return {
