@@ -15,8 +15,8 @@ body {
   line-height: 28px;
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #071630;
-  color: #99b7ce;
+  background-color: #fff;
+  color: #d3e0e6;
 
   @include bp(mid) {
     font-size: 16px;
@@ -49,6 +49,13 @@ header {
     margin: 0.8em auto 2rem;
     border-width: 6px;
     transform: rotate(-3deg);
+
+    a:link,
+    a:visited {
+      color: #000;
+      text-decoration: none;
+    }
+
   }
 
   p {
@@ -65,14 +72,14 @@ header {
 }
 
 footer {
-  border-top: solid 3px #000;
-  background-color: #fff;
+  border-top: solid 6px #000;
   padding: 4rem 0;
   margin: 0 auto;
 }
 
 main {
  padding: 2rem 0 8rem;
+ background: #071630;
 }
 
 .container {
@@ -121,7 +128,6 @@ form {
     width: 90%;
     padding: 2rem;
     margin: 2rem auto 0;
-
   
     @include bp(wide) {
       height: 300px;
@@ -195,6 +201,18 @@ form {
   h2 {
     margin-top: -0.6em;
     margin-left: 1em;
+
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: #000;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+        
+      }
+    }
     @include bp(wide) {
       margin-left: -0.6em;
     }
@@ -230,4 +248,8 @@ form {
     background-color: #99b7ce;
   }
 
+}
+
+.ideas-list {
+  margin:6rem auto;
 }

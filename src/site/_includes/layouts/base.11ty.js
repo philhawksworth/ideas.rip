@@ -13,7 +13,7 @@ module.exports = (data) => {
       <header>
        <div class="container">
         <h1 class="site-title">
-          Ideas.rip
+          <a href="/">Ideas.rip</a>
         </h1>
         <p>
           We all have big ideas. It's why we register so many domains, and daydream about making that perfect thing that everyone will love.
@@ -35,8 +35,9 @@ module.exports = (data) => {
       <footer>
 
       <div class="container">
-        <a href="/api/latest">latest</a>
-        <a href="/api/lucky-dip">Lucky dip</a>
+        <p> Fresh from the API
+        <a href="/api/latest">The latest 5 submissions</a>
+        <a href="/api/lucky-dip">A random 5 submissions</a>
       </div>
       </footer>
     </body>

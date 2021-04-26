@@ -3,9 +3,6 @@ title: Home
 layout: layouts/base.11ty.js
 ---
 
-
-
-
 <form action="/api/add-idea" name="ideas" method="POST" netlify>
   <h2>It's time I laid this to rest</h2>
     <textarea name="description" class="idea-description" required placeholder="I had this great idea, see..."></textarea>
@@ -15,13 +12,14 @@ layout: layouts/base.11ty.js
 </form>
 
 
+<p>
+  What ideas have other laid to rest?
+</p>
 
-
-
-<div class="latest-ideas">
+<div class="ideas-list">
 {% for data in ideas %}
   <div class="idea">
-    <h2>{{data.title}}</h2>
+    <h2><a href="/idea/{{data.path}}">{{data.title}}</a></h2>
     <div class="idea-description">{{data.description}}</div>
     <div class="idea-submitter">{{data.user}}</div>
   </div>

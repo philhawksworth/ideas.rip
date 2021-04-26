@@ -18,7 +18,7 @@ module.exports = async () => {
     .select('*')
     .filter('flagged', 'eq', 0)
     .order('created', { ascending: false })
-    .range(0,2);
+    .range(0,4);
   
   // console.log(ideas, error);
   return ideas;
