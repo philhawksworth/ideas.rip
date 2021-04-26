@@ -8,7 +8,6 @@ const {
 } = process.env;
 
 
-
 const handler = async event => {
 
   // connect to database
@@ -24,8 +23,6 @@ const handler = async event => {
 
   
   console.log(`ODB render of ${path}`);
-  console.log(process.env);
-  
   
   // render the data into the template
   return {
@@ -36,6 +33,5 @@ const handler = async event => {
     body: pageTemplate(ideas[0])
   }
 }
-
 
 exports.handler = builder(handler);

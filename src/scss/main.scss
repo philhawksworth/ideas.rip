@@ -2,7 +2,8 @@
 @import '_variables';
 
 
-html, body {
+
+* {
   margin: 0;
   padding: 0;
 }
@@ -10,22 +11,68 @@ html, body {
 body {
   text-align: center;
   color: $primary-text-color;
-  font-family: Georgia, serif;
   font-weight: normal;
   line-height: 28px;
   font-size: 14px;
-  background-color: $primary-page-color;
-  padding: 2rem;
-  border-top: 3px solid $secondary-text-color;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #071630;
+  color: #99b7ce;
 
   @include bp(mid) {
-    border-top-color: $accent-color;
     font-size: 16px;
   }
   @include bp(wide) {
-    border-top-color: $accent-color-alternate;
-    font-size: 18px;
+    font-size: 20px;
   }
+}
+
+h1 ,h2, h3 {
+  background-color: #ffd632;
+  color: #000;
+  padding: 0.2em 1em;
+  border: solid 2px #000;
+  display: inline-block;
+  font-family: 'Permanent Marker', cursive;
+}
+
+
+
+header {
+  background: #071630;
+  background: linear-gradient(0deg, #071630 0%, #183541 100%);
+  padding: 2rem 0;
+
+
+  h1 {
+    font-size: 5rem;
+    padding: 0.5em 1em;
+    margin: 0.8em auto 2rem;
+    border-width: 6px;
+    transform: rotate(-3deg);
+  }
+
+  p {
+    margin: 1rem auto;
+    max-width: 80%;
+    @include bp(mid) {
+      max-width: 70%;
+    }
+    @include bp(mid) {
+      max-width: 60%;
+    }
+  } 
+
+}
+
+footer {
+  border-top: solid 3px #000;
+  background-color: #fff;
+  padding: 4rem 0;
+  margin: 0 auto;
+}
+
+main {
+ padding: 2rem 0 8rem;
 }
 
 .container {
@@ -38,10 +85,149 @@ body {
   @include bp(wide) {
     max-width: 1000px;
   }
-}
 
+}
 ul {
-  margin: 1rem auto;
   text-align: left;
+  margin: 1rem auto;
 }
 
+
+form {
+  
+  margin: 3rem auto 8rem;
+  background-color: #0b375e;
+  border: solid 3px #000;
+  position: relative;
+
+  h2 {
+    margin-top: -0.6em;
+    margin-left: 1em;
+    @include bp(wide) {
+      margin-left: -0.6em;
+    }
+  }
+
+
+  .idea-description {
+    border-style: none;
+    font-size: 1.2em;
+    font-family: 'Permanent Marker', cursive;
+    border: solid 3px #000;
+    border-radius: 6px;
+    color: #000;
+    background-color: #99b7ce;
+    height: 200px;
+    width: 90%;
+    padding: 2rem;
+    margin: 2rem auto 0;
+
+  
+    @include bp(wide) {
+      height: 300px;
+    }
+  
+  }
+
+
+  .idea-description:focus,
+  .idea-description:hover,
+  input[type="text"]:focus,
+  input[type="text"]:hover {
+    outline: none;
+    color: #0d2650;
+    background-color: #fff;
+  }
+
+
+  input[type="text"] {
+    font-size: 1.2em;
+    font-family: 'Permanent Marker', cursive;
+    display: block;
+    margin: 1.5rem auto;
+    padding: 0.2em 1em;
+    border: solid 3px #000;
+    border-radius: 6px;
+    outline: none;
+    width: 90%;
+    color: #000;
+    background-color: #99b7ce;
+  }
+  
+  textarea::placeholder,
+  input[type="text"]::placeholder {
+    color: #5371a5;
+  }
+
+  input[type=submit] {
+    margin-bottom: -0.75em;
+    background-color: #ff00cc;
+    font-size: 1.5em;
+    border: solid 3px #000;
+    font-family: 'Permanent Marker', cursive;
+    color: #000;
+    padding: 0.2em 1em;
+    
+    &:hover,
+    &:focus {
+      background-color: #0cc6ff;
+      cursor: pointer;
+    }
+  }
+  
+}
+
+
+
+.idea {
+  border: solid 3px #000;
+  position: relative;
+  text-align: left;
+  background-color: #0b375e;
+  background-image: url(/images/bubble-corner.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  margin-bottom: 3rem;
+  padding-right: 10rem;
+
+  h2 {
+    margin-top: -0.6em;
+    margin-left: 1em;
+    @include bp(wide) {
+      margin-left: -0.6em;
+    }
+  }
+
+  .idea-description{
+    margin-top:2rem;
+    margin-right:4rem;
+    margin-bottom:4rem;
+    margin-left:2rem;
+    color: #fff;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.2rem;
+    @include bp(mid) {
+      margin-right: 8rem;
+      margin-bottom: 10rem;
+    }
+    @include bp(wide) {
+      margin-right: 12rem;
+      margin-bottom: 10rem;
+    }
+  }
+
+  .idea-submitter {
+    position: absolute;
+    bottom: -0.5em;
+    right: 2em;
+    border: solid 3px #000;
+    background-color: #fff;
+    font-family: 'Permanent Marker', cursive;
+    color: #000;
+    padding: 0.2em 1em;
+    background-color: #99b7ce;
+  }
+
+}

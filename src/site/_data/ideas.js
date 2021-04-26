@@ -20,6 +20,6 @@ module.exports = async () => {
     .order('created', { ascending: false })
     .range(0,2);
   
-  console.log(ideas, error);
+  // console.log(ideas, error);
   return ideas;
 }

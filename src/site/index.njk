@@ -3,20 +3,27 @@ title: Home
 layout: layouts/base.11ty.js
 ---
 
-<h1>Ideas RIP</h1>
 
-<form action="/api/add-idea" name="ideas"  method="POST" netlify>
-  <input type="text" name="title">
-  <textarea name="description" id="description" cols="30" rows="10"></textarea>
-  <input type="text" name="name">
-  <input type="submit">
+
+
+<form action="/api/add-idea" name="ideas" method="POST" netlify>
+  <h2>It's time I laid this to rest</h2>
+    <textarea name="description" class="idea-description" required placeholder="I had this great idea, see..."></textarea>
+    <input type="text" name="title" class="idea-title" required placeholder="I called my idea...">
+    <input type="text" name="name" class="idea-submitter" required placeholder="And they call me...">
+    <input type="submit" value="OK, I'm ready to free myself of this burden">
 </form>
 
 
+
+
+
 <div class="latest-ideas">
-{% for idea in ideas %}
-<div class="idea">
-  <h2><a href="/idea/{{idea.path}}">{{idea.title}}</a></h2>
-</div>
+{% for data in ideas %}
+  <div class="idea">
+    <h2>{{data.title}}</h2>
+    <div class="idea-description">{{data.description}}</div>
+    <div class="idea-submitter">{{data.user}}</div>
+  </div>
 {% endfor %}
 </div>
